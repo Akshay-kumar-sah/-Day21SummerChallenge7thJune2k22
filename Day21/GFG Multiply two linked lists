@@ -1,0 +1,23 @@
+Question :Gfg Multiply two linked lists
+Solution :
+class GfG{
+  /*You are required to complete this method */
+   public long multiplyTwoLists(Node l1,Node l2){
+       long  mod= 1000000007;
+       long p1=0;
+       long p2=0;
+       long ans=1;
+       while(l1!=null){
+           p1=(p1*10+(l1.data))%mod;
+           l1=l1.next;
+           
+       }
+       while(l2!=null){
+           p2=(p2*10+(l2.data))%mod;
+           l2=l2.next;
+       }
+       ans=p1*p2;
+       return ans%mod;
+          //add code here.
+   }
+}
